@@ -1081,7 +1081,7 @@ a {
   *,
   *::before,
   *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
+    scroll-behavior: auto ;
+    transition-duration: 0.01ms
   }
 }

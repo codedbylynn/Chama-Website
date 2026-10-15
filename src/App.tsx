@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import MembersPage from "./MembersPage";
 import {
   BrowserRouter,
   Navigate,
@@ -658,7 +659,7 @@ function App() {
         <Route path="/app" element={<AppLayout />}>
           <Route index element={<Navigate to="dashboard" replace />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="members" element={<PlaceholderPage title="Members" />} />
+          <Route path="members" element={<MembersPage />} />
           <Route
             path="members/:id"
             element={<PlaceholderPage title="Member details" />}

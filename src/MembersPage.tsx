@@ -1,6 +1,6 @@
-
-import { Search, Users } from "lucide-react";
+import { Search, Users, ChevronRight } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 type Member = {
@@ -44,6 +44,7 @@ const sampleMembers: Member[] = [
 
 function MembersPage() {
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   const filteredMembers = sampleMembers.filter((member) =>
     `${member.name} ${member.phone} ${member.role}`
@@ -94,7 +95,11 @@ function MembersPage() {
             </thead>
             <tbody>
               {filteredMembers.map((member) => (
-                <tr key={member.id}>
+                <tr
+                    key={member.id}
+                    className="clickable-member-row"
+                    onClick={() => navigate(`/app/members/${member.id}`)}
+                      >
                   <td>
                     <div className="member-name-cell">
                       <span className="member-avatar">

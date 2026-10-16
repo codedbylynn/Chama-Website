@@ -1220,3 +1220,12 @@ a {
     animation-duration: 0.01ms !important;
   }
 }
+
+.clickable-member-row {
+  cursor: pointer;
+}
+
+.clickable-member-row:focus-within,
+.clickable-member-row:hover {
+  background: #f0f7f1;
+}

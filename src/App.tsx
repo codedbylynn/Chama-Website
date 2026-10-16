@@ -36,9 +36,6 @@ import type { LucideIcon } from "lucide-react";
 
 import "./App.css";
 
-/* -------------------------------------------------------------------------
-   Sample data (Release 1). Replace with API data in Release 2.
-   ------------------------------------------------------------------------- */
 
 const member = {
   firstName: "Lynn",

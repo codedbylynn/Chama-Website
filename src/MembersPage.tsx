@@ -1,4 +1,4 @@
-import { Search, Users, ChevronRight } from "lucide-react";
+import { Search, Users, ChevronRight, X } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { sampleMembers } from "./memberData";
@@ -49,6 +49,68 @@ function MembersPage() {
     </button>
   </div>
 </div>
+
+{showAddMember && (
+  <div className="add-member-card">
+    <div className="add-member-card-heading">
+      <div>
+        <h2>Add a member</h2>
+        <p>Enter the details of the person joining your chama.</p>
+      </div>
+
+      <button
+        type="button"
+        className="close-form-button"
+        onClick={() => setShowAddMember(false)}
+        aria-label="Close form"
+      >
+        <X size={20} />
+      </button>
+    </div>
+
+    <form>
+      <label htmlFor="memberName">Full name</label>
+      <input
+        id="memberName"
+        name="memberName"
+        type="text"
+        placeholder="e.g. Mary Wanjiku"
+        required
+      />
+
+      <label htmlFor="memberPhone">Phone number</label>
+      <input
+        id="memberPhone"
+        name="memberPhone"
+        type="tel"
+        placeholder="e.g. 0712345678"
+        required
+      />
+
+      <label htmlFor="memberRole">Role</label>
+      <select id="memberRole" name="memberRole" defaultValue="Member">
+        <option value="Member">Member</option>
+        <option value="Treasurer">Treasurer</option>
+        <option value="Admin">Admin</option>
+      </select>
+
+      <div className="add-member-form-actions">
+        <button
+          type="button"
+          className="cancel-member-button"
+          onClick={() => setShowAddMember(false)}
+        >
+          Cancel
+        </button>
+
+        <button type="submit" className="add-member-button">
+          Save member
+        </button>
+      </div>
+    </form>
+  </div>
+)}
+
 
 
       <div className="members-toolbar content-card">

@@ -1458,3 +1458,101 @@ a {
     justify-content: space-between;
   }
 }
+
+.add-member-card {
+  margin: 24px 0;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e1eae3;
+  border-radius: 16px;
+}
+
+.add-member-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.add-member-card-heading h2 {
+  margin: 0 0 6px;
+  color: #19352a;
+  font-size: 20px;
+}
+
+.add-member-card-heading p {
+  margin: 0;
+  color: #6b7d72;
+  font-size: 14px;
+}
+
+.close-form-button {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: #f0f7f1;
+  color: #19352a;
+  cursor: pointer;
+}
+
+.add-member-card form {
+  display: grid;
+  gap: 10px;
+}
+
+.add-member-card form label {
+  margin-top: 8px;
+  color: #19352a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.add-member-card form input,
+.add-member-card form select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #d7e2d9;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #19352a;
+  font: inherit;
+}
+
+.add-member-card form input:focus,
+.add-member-card form select:focus {
+  border-color: #008b48;
+  outline: 3px solid #008b4820;
+}
+
+.add-member-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.cancel-member-button {
+  padding: 11px 16px;
+  border: 1px solid #d7e2d9;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #19352a;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .add-member-card {
+    padding: 18px;
+  }
+
+  .add-member-form-actions > button {
+    flex: 1;
+  }
+}

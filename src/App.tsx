@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import MembersPage from "./MembersPage";
+import MemberDetailsPage from "./MemberDetailsPage";
 import {
   BrowserRouter,
   Navigate,
@@ -659,7 +660,7 @@ function App() {
           <Route path="members" element={<MembersPage />} />
           <Route
             path="members/:id"
-            element={<PlaceholderPage title="Member details" />}
+            element={<MemberDetailsPage />}
           />
           <Route
             path="contributions"

@@ -1,6 +1,7 @@
 import { Search, Users, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { sampleMembers } from "./memberData";
 
 
 type Member = {
@@ -11,36 +12,7 @@ type Member = {
   status: "Active" | "Pending";
 };
 
-const sampleMembers: Member[] = [
-  {
-    id: 1,
-    name: "Angela Mwangi",
-    role: "Admin",
-    phone: "0712 345 678",
-    status: "Active",
-  },
-  {
-    id: 2,
-    name: "Brian Otieno",
-    role: "Treasurer",
-    phone: "0722 456 789",
-    status: "Active",
-  },
-  {
-    id: 3,
-    name: "Grace Wanjiku",
-    role: "Member",
-    phone: "0701 234 567",
-    status: "Active",
-  },
-  {
-    id: 4,
-    name: "Kevin Kiptoo",
-    role: "Member",
-    phone: "0798 123 456",
-    status: "Pending",
-  },
-];
+
 
 function MembersPage() {
   const [search, setSearch] = useState("");

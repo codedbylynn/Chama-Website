@@ -1229,3 +1229,232 @@ a {
 .clickable-member-row:hover {
   background: #f0f7f1;
 }
+
+/* MEMBER DETAILS PAGE */
+
+.member-details-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  color: #075e36;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #008b48;
+}
+
+.member-profile-header {
+  padding: 26px;
+}
+
+.member-profile-identity {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.member-profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #e5f2e9;
+  color: #075e36;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.member-profile-identity h1 {
+  margin: 0 0 7px;
+  color: #19352a;
+  font-size: 25px;
+}
+
+.member-profile-identity p {
+  margin: 0 0 12px;
+  color: #718078;
+  font-size: 13px;
+}
+
+.member-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.member-stat-card {
+  padding: 22px;
+  min-width: 0;
+}
+
+.member-stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #e5f2e9;
+  color: #075e36;
+}
+
+.member-stat-icon.outstanding-icon {
+  background: #fff3d9;
+  color: #946200;
+}
+
+.member-stat-card p {
+  margin: 18px 0 8px;
+  color: #718078;
+  font-size: 13px;
+}
+
+.member-stat-card h2 {
+  margin: 0;
+  color: #19352a;
+  font-size: 24px;
+  overflow-wrap: anywhere;
+}
+
+.member-information-card {
+  padding: 24px;
+}
+
+.member-information-card h2 {
+  margin: 0 0 20px;
+  color: #19352a;
+  font-size: 17px;
+}
+
+.member-information-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #edf1ed;
+}
+
+.member-information-row:last-child {
+  border-bottom: none;
+}
+
+.information-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #718078;
+  font-size: 13px;
+}
+
+.information-label svg {
+  flex-shrink: 0;
+}
+
+.member-information-row strong {
+  color: #19352a;
+  font-size: 13px;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.member-not-found {
+  padding: 28px;
+}
+
+.member-not-found h1 {
+  color: #19352a;
+}
+
+.member-not-found p {
+  color: #718078;
+}
+
+@media (max-width: 640px) {
+  .member-profile-header,
+  .member-information-card {
+    padding: 18px;
+  }
+
+  .member-profile-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 19px;
+  }
+
+  .member-profile-identity h1 {
+    font-size: 21px;
+  }
+
+  .member-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .member-stat-card {
+    padding: 18px;
+  }
+
+  .member-information-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .member-information-row strong {
+    text-align: left;
+  }
+}
+
+.members-heading-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.add-member-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #008b48;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.add-member-button:hover {
+  background: #075e36;
+  transform: translateY(-1px);
+}
+
+.add-member-button:focus-visible {
+  outline: 3px solid #f3c969;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .members-heading-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

@@ -17,6 +17,7 @@ type Member = {
 function MembersPage() {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
+  const [showAddMember, setShowAddMember] = useState(false);
 
   const filteredMembers = sampleMembers.filter((member) =>
     `${member.name} ${member.phone} ${member.role}`
@@ -26,16 +27,29 @@ function MembersPage() {
 
   return (
     <section className="members-page">
-      <div className="page-heading">
-        <div>
-          <h1>Members</h1>
-          <p>Manage your chama members and their membership details.</p>
-        </div>
-        <div className="members-total">
-          <Users size={18} />
-          <span>{sampleMembers.length} members</span>
-        </div>
-      </div>
+     
+<div className="page-heading">
+  <div>
+    <h1>Members</h1>
+    <p>Manage your chama members and their membership details.</p>
+  </div>
+
+  <div className="members-heading-actions">
+    <div className="members-total">
+      <Users size={18} />
+      <span>{sampleMembers.length} members</span>
+    </div>
+
+    <button
+      type="button"
+      className="add-member-button"
+      onClick={() => setShowAddMember(true)}
+    >
+      + Add member
+    </button>
+  </div>
+</div>
+
 
       <div className="members-toolbar content-card">
         <div className="members-search">

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import MembersPage from "./MembersPage";
 import MemberDetailsPage from "./MemberDetailsPage";
 import ContributionsPage from "./ContributionsPage";
+import LandingPage from "./LandingPage";
 import {
   BrowserRouter,
   Navigate,
@@ -639,8 +640,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/app/dashboard" replace />} />
+        <Route path="/" element={<LandingPage />} />
 
+        <Route path="/" element={<Navigate to="/app/dashboard" replace />} />
+        
         <Route path="/login" element={<PlaceholderPage title="Login" />} />
         <Route
           path="/register"

@@ -8,7 +8,7 @@ import {
   Phone,
   Wallet,
 } from "lucide-react";
-import { sampleMembers } from "./memberData";
+import { sampleMembers } from "../memberData";
 
 function MemberDetailsPage() {
   const { id } = useParams();

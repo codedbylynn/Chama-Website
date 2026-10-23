@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import MembersPage from "./MembersPage";
-import MemberDetailsPage from "./MemberDetailsPage";
-import ContributionsPage from "./ContributionsPage";
-import LandingPage from "./LandingPage";
+import MembersPage from "./Pages/MembersPage";
+import MemberDetailsPage from "./Pages/MemberDetailsPage";
+import ContributionsPage from "./Pages/ContributionsPage";
+import LandingPage from "./Pages/LandingPage";
 import {
   BrowserRouter,
   Navigate,

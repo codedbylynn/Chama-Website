@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search, Users, ChevronRight, X } from "lucide-react";
-import { sampleMembers } from "./memberData";
+import { sampleMembers } from "../memberData";
 
 type MemberRole = "Admin" | "Treasurer" | "Member";
 

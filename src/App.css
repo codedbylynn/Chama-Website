@@ -118,11 +118,11 @@ a {
 }
 
 .page-content {
-  flex: 1;
   width: 100%;
-  max-width: 1200px;
-  padding: 32px 40px 40px;
-  margin: 0 auto;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* ==========================================================================

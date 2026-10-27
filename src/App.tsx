@@ -26,6 +26,12 @@ import {
   Users,
   Wallet,
   X,
+  Activity,
+  ChevronDown,
+  ReceiptText,
+  RefreshCw,
+  Sparkles,
+UserCheck,
 } from "lucide-react";
 
 import type { LucideIcon } from "lucide-react";
@@ -59,11 +65,16 @@ type NavItem = {
 
 const navigation: NavItem[] = [
   { label: "Dashboard", path: "/app/dashboard", icon: LayoutDashboard },
-  { label: "Members", path: "/app/members", icon: Users },
   { label: "Contributions", path: "/app/contributions", icon: Wallet },
-  { label: "Cycles & payouts", path: "/app/cycles", icon: CalendarDays },
-  { label: "Payout approvals", path: "/app/payouts", icon: HandCoins },
-  { label: "Financial ledger", path: "/app/ledger", icon: FileText },
+  { label: "Ledger", path: "/app/ledger", icon: ReceiptText },
+  { label: "Payout rotation", path: "/app/cycles", icon: RefreshCw },
+  { label: "Members", path: "/app/members", icon: Users },
+  { label: "Activity", path: "/app/activity", icon: Activity },
+  { label: "Settings", path: "/app/settings", icon: Settings },
+];
+
+const managementNavigation: NavItem[] = [
+  { label: "Approvals", path: "/app/payouts", icon: UserCheck },
 ];
 
 const managementNavigation: NavItem[] = [
